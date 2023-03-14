@@ -1,0 +1,24 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: set-namespace-kpt-package-context-tst
+  annotations:
+    config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: git@gitlab.bol.io:bb8/bb8-experiments/set-namespace-kpt-package-context-tst
+    directory: /
+    ref: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: git@gitlab.bol.io:bb8/bb8-experiments/set-namespace-kpt-package-context-tst
+    directory: /
+    ref: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
+    commit: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
+pipeline:
+  mutators:
+    - image: gcr.io/kpt-fn/set-namespace:v0.4.1
+      configPath: package-context.yaml

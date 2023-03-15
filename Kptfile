@@ -7,17 +7,17 @@ metadata:
 upstream:
   type: git
   git:
-    repo: git@gitlab.bol.io:bb8/bb8-experiments/set-namespace-kpt-package-context-tst
+    repo: git@github.com:efistasija/set-namespace-kpt-package-context-rg-tst.git
     directory: /
-    ref: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
+    ref: e38215d0b1cb0d8b4f63eb1c3202ff23432fdc5b
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
-    repo: git@gitlab.bol.io:bb8/bb8-experiments/set-namespace-kpt-package-context-tst
+    repo: git@github.com:efistasija/set-namespace-kpt-package-context-rg-tst.git
     directory: /
-    ref: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
-    commit: 5ac804b67fd3e9d53a65d18413d6231b86dd4842
+    ref: e38215d0b1cb0d8b4f63eb1c3202ff23432fdc5b
+    commit: e38215d0b1cb0d8b4f63eb1c3202ff23432fdc5b
 pipeline:
   mutators:
     - image: gcr.io/kpt-fn/set-namespace:v0.4.1
